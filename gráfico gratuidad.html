@@ -1,0 +1,88 @@
+<! -- Hecho con Chatgpt -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gráfico Gratuidad Animado</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <select id="yearSelect" onchange="updateChart()">
+    <option value="I Quintil">I Quintil</option>
+    <option value="II Quintil">II Quintil</option>
+    <option value="III Quintil">III Quintil</option>
+    <option value="IV Quintil">IV Quintil</option>
+    <option value="V Quintil">V Quintil</option>
+  </select>
+
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart;
+
+    // Datos para cada año
+    var dataByYear = {
+      'I Quintil': [6752, 11017, 8293, 9442, 9213, 15054, 14436],
+      'II Quintil': [106723, 108721, 77461, 72585, 72098, 95024,101027],
+      'III Quintil': [26411, 28302, 45201, 37699, 35283, 36162, 43089],
+      'IV Quintil': [0, 0, 0, 0, 0, 0, 0],
+      'V Quintil': [0, 0, 0, 0, 0, 0, 0],
+    };
+
+    // Etiquetas de los años
+    var yearsLabels = [['2016'],['2017'],['2018'],['2019'],['2020'],['2021'],['2022']];
+
+    // Índice para rastrear el año actual
+    var currentYearIndex = 0;
+
+    // Función para crear y actualizar el gráfico
+    function createOrUpdateChart(year) {
+      var chartData = {
+        labels: yearsLabels,
+        datasets: [{
+          label: 'Conjunto de datos 1',
+          data: [], // Sin datos inicialmente
+          backgroundColor: 'rgba(74, 125, 99, 0.5)',
+          borderColor: 'rgba(74, 125, 99, 1)',
+          borderWidth: 1,
+          pointRadius: 0 // Oculta los puntos iniciales
+        }]
+      };
+
+      // Si el gráfico ya existe, actualiza los datos; de lo contrario, crea un nuevo gráfico
+      if (myChart) {
+        myChart.data = chartData;
+        myChart.update();
+      } else {
+        myChart = new Chart(ctx, {
+          type: 'line',
+          data: chartData
+        });
+      }
+
+      // Actualiza los puntos gradualmente
+      var data = dataByYear[year];
+      var i = 0;
+      var interval = setInterval(function() {
+        myChart.data.datasets[0].data.push(data[i]);
+        myChart.update();
+        i++;
+        if (i >= data.length) {
+          clearInterval(interval);
+        }
+      }, 1000); // Cambia el valor aquí para ajustar el intervalo de aparición de los puntos (1 segundo en este ejemplo)
+    }
+
+    // Función para capturar el cambio de año y actualizar el gráfico
+    function updateChart() {
+      var year = document.getElementById('yearSelect').value;
+      createOrUpdateChart(year);
+    }
+
+    // Crea el gráfico inicial con el año seleccionado por defecto
+    var initialYear = document.getElementById('yearSelect').value;
+    createOrUpdateChart(initialYear);
+  </script>
+</body>
+</html>
+

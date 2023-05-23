@@ -1,0 +1,413 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+body { 
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F5F5F5 ;
+  margin-right: 5px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px, 100 px;
+  background: #E84A5F;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5px;
+  z-index:99;
+}
+
+
+.logo {
+  font-size: 2em;
+  user-select: none;
+  padding-left: 20px;
+}
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #F5F5F5;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  padding-left:10px;
+}
+
+.navigation a::after {
+  content:"";
+  position: absolute;
+  left:0;
+  bottom:-2px;
+  width: 100%;
+  height: 2px;
+  background: #30416D;
+  border-radius:5px;
+  padding-left:10px;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.navigation a:hover::after{
+  transform: scaleX(1);
+  
+}
+
+.boton{
+    background-color:#FF847C; 
+    border: none;
+    color: #F5F5F5;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+  
+}
+.boton:hover{
+  background-color: #df4949;
+}
+
+section {
+  display: none;
+}
+.mostrar {
+  display: block;
+}
+
+
+#insertarnombre{
+  text-align:center;
+}
+#Pregunta1{
+  text-align:center;
+
+}
+#Frasesi{
+  text-align:center;
+}
+#Fraseno{
+  text-align:center;
+}
+
+.mapadiv{
+    width: 400px;
+    position: relative;
+    left: 50px;
+    bottom: -50px;
+
+}
+.mapadiv path{
+    fill:#F5F5F5;
+    stroke: #FF847C;
+    stroke-width: 2px;
+    cursor: pointer;
+
+}
+
+.mapadiv :hover{
+    fill: #E84A5F
+}
+
+.letras{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416D;
+  font-size: 35px;  
+}
+
+.letrachica{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416D;
+  font-size: 17px;  
+}
+
+.cajanombre{
+  margin-bottom: 15px;
+  border: 1px solid #FF847C;
+  width: 80%;
+  height: 30px;
+  
+}
+.info{
+    background-color:#FF847C; 
+    border: none;
+    color: #F5F5F5;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+
+#infoquintil {
+  display: none;
+  margin-top: 10px;
+}
+  
+}
+.info:hover{
+  background-color: #FF847C;  
+}
+.infoquintil{
+  display: none;
+  border: 1px solid #888;
+  background-color: #F5F5F5;
+}
+.comuna{
+  position: relative;
+  left: -10;
+}
+.Titulo{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #F5F5F5;
+  font-size: 30px;    
+}
+.letrasH{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #F5F5F5;
+  font-size: 8px;  
+}
+.letrasinfo{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416D;
+  font-size: 15px;  
+  margin-top: 10px;
+}
+
+/*Recursos Útiles*/
+.links{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #99B898;
+  font-size: 20px;  
+}
+.RUL{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416D;
+  font-size: 25px;
+}
+.RecUt{
+  position: relative;
+  left: -400px;
+  bottom: 125px;
+}
+.PosLink{
+  position: relative;
+  bottom: -20px;
+}
+
+/*INICIO*/
+.fotoinicio{
+  position: relative;
+  left: 340px;
+  bottom:50px;
+}
+.tituloinicio{
+  position:relative;
+  left: -900px;
+  bottom: 700px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416D;
+  font-size: 75px;   
+}
+.DatoAtra{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416d;
+  font-size: 16px;
+}
+.DatoAtract{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416d;
+  font-size: 20px;  
+}
+.PregIni{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f5f5f5;
+  font-size: 80px;  
+  position: relative;
+  bottom: -75px;
+  left: 600px;
+  
+}
+/*NOSOTROS*/
+.TituloN{
+  position:relative;
+  bottom:150px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416D;
+  font-size: 50px;  
+}
+
+/* Para bajar el texto */
+.bajarIn{
+  position: relative;
+  bottom: -25px;
+}
+.bajarQuin{
+  position: relative;
+  bottom: -50px;
+}
+
+
+/* #mapacalor {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to right, blue, green, yellow, red);
+} */
+
+.result {
+  display: inline-flex;
+  font-size: 18px;
+  color: #30416D;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #F5F5F5;
+  border: none;
+  white-space: nowrap;
+  max-width: max-content;
+}
+
+.calculadoraquintil {
+  font-size: 24px;
+  color: #30416D;
+  margin-top: 20px;
+  font-weight: bold; 
+}
+.TituloGrafico{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #30416D;
+  font-size: 22px;  
+}
+/* globito descripcion de comuna */
+.oculto {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #F5F5F5;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  z-index: 9999; /*Esto es para que este globito aparezca delante de todo*/
+}
+
+
+/* Estilo para el texto dentro del globo */
+.oculto-texto {
+  margin: 0; /* Ajusta los márgenes según sea necesario */
+}
+
+/* Código adaptado de chat gpt: */
+#calculadora {
+  background-color: #F5F5F5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+input[type="number"] {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #99B898;
+  color: #F5F5F5;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #54a060;
+}
+
+p.result {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+/* Código adaptado de chat gpt: */
+.botonesespaciados {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.letrachica {
+  margin-bottom: 10px;
+}
+
+.botonn {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Hacer que botones se agranden levemente cuando se sostiene mouse por encima: */
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+}
+
+.botonn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.botonn:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/* Estilos CSS para las diapositivas */
+.slide {
+  display: none;
+}
+
+.slide.activo {
+  display: block;
+}
+
+
+.title-box {
+  background-color: #99B898;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#pinicio {
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #F5F5F5;
+  
+}
