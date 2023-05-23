@@ -37,7 +37,7 @@ $(document).ready(function(){
 
   
   //botones de quintiles:
-  //Los siguientes botones hacen que la visualización de los quintiles desaparezca y sea reemplazada por la selección de comuna.
+  //Los siguientes botones hacen que la visualización de los quintiles desaparezca y sea reemplazada por los graficos del quintil correspondiente
   $("#botonquintil1").click(function(){
       $("#graficos").show();
       mostrarGrafico('I Quintil');
@@ -64,6 +64,15 @@ $(document).ready(function(){
       mostrarGrafico('V Quintil');
       $("#grupoeconomico").hide();
   });
+  
+  //función para mostrar el mapa despues de los graficos
+  $("#botonsig").click(function(){
+      $("#graficos").hide(); 
+      $("#titulomapa").show();
+      $("#Mapa").show();
+
+    
+  });
 });
 
 //Funcion para que se muestre el grafico correspondiente al quintil seleccionado
@@ -73,6 +82,7 @@ function mostrarGrafico(quintil) {
   // Llamar a la función para actualizar el gráfico
   updateIngresoChart();
 }
+
 
 //funcion para obtener las descripciones de las comunas, adaptado de chat gpt
 function showD(event, comuna) {
@@ -107,79 +117,79 @@ function obtenerDescripcionComuna(comuna) {
   // Aquí puedes definir las descripciones de cada comuna
   switch (comuna) {
     case 'Padre Hurtado':
-      return 'Padre Hurtado es muy bonito. Es una comuna ubicada en la Región Metropolitana de Santiago, en Chile, conocida por sus hermosos paisajes y su rica historia.';
+      return 'Ingresos a: Pontificia Universidad Católica de Chile: 11, Universidad de Chile: 12, Universidad de Santiago de Chile: 24';
     case 'Maipú':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 142, Universidad de Chile: 245, Universidad de Santiago de Chile: 278';
     case 'Cerrillos':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 7, Universidad de Chile: 20, Universidad de Santiago de Chile: 25';
     case 'Estación Central':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 18, Universidad de Chile: 29, Universidad de Santiago de Chile: 56';
     case 'Pudahuel':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 14, Universidad de Chile: 24, Universidad de Santiago de Chile: 37';
     case 'Lo Prado':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 5, Universidad de Chile: 6, Universidad de Santiago de Chile: 7';
     case 'Cerro Navia':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 1, Universidad de Chile: 4, Universidad de Santiago de Chile: 12';
     case 'Santiago':
-      return 'Santiago es la capital de Chile y una de las ciudades más grandes y desarrolladas de América del Sur.';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 223, Universidad de Chile: 477, Universidad de Santiago de Chile: 357';
     case 'Renca':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 19, Universidad de Chile: 39, Universidad de Santiago de Chile: 30';
     case 'Quinta Normal':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 12, Universidad de Chile: 30, Universidad de Santiago de Chile: 45';
     case 'Recoleta':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 23, Universidad de Chile: 35, Universidad de Santiago de Chile: 45';
     case 'Independencia':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 28, Universidad de Chile: 24, Universidad de Santiago de Chile: 30';
     case 'Quilicura':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 1, Universidad de Chile: 75, Universidad de Santiago de Chile: 84';
     case 'Conchalí':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 50, Universidad de Chile: 8, Universidad de Santiago de Chile: 12';
     case 'San Bernardo':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 53, Universidad de Chile: 72, Universidad de Santiago de Chile: 112';
     case 'El Bosque':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 35, Universidad de Chile: 31, Universidad de Santiago de Chile: 48';
     case 'La Cisterna':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 38, Universidad de Chile: 31, Universidad de Santiago de Chile: 68';
     case 'Lo Espejo':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 3, Universidad de Chile: 7, Universidad de Santiago de Chile: 14';
     case 'Pedro Aguirre Cerda':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 5, Universidad de Chile: 4, Universidad de Santiago de Chile: 14';
     case 'San Miguel':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 44, Universidad de Chile: 53, Universidad de Santiago de Chile: 60';
     case 'San Ramón':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 10, Universidad de Chile: 5, Universidad de Santiago de Chile: 12';
     case 'La Granja':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 10, Universidad de Chile: 13, Universidad de Santiago de Chile: 23';
     case 'San Joaquín':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 6, Universidad de Chile: 2, Universidad de Santiago de Chile: 17';
     case 'La Pintana':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 16, Universidad de Chile: 29, Universidad de Santiago de Chile: 44';
     case 'Providencia':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 278, Universidad de Chile: 334, Universidad de Santiago de Chile: 100';
     case 'Ñuñoa':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 130, Universidad de Chile: 223, Universidad de Santiago de Chile: 90';
     case 'La Reina':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 175, Universidad de Chile: 117, Universidad de Santiago de Chile: 25';
     case 'Macul':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 18, Universidad de Chile: 32, Universidad de Santiago de Chile: 24';
     case 'Puente Alto':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 167, Universidad de Chile: 177, Universidad de Santiago de Chile: 182';
     case 'Pirque':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 8, Universidad de Chile: 5, Universidad de Santiago de Chile: 2';
     case 'San José de Maipo':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 2, Universidad de Chile: 3, Universidad de Santiago de Chile: 6';
     case 'La Florida':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 151, Universidad de Chile: 141, Universidad de Santiago de Chile: 164';
     case 'Peñalolén':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 121, Universidad de Chile: 92, Universidad de Santiago de Chile: 44';
     case 'Las Condes':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 542, Universidad de Chile: 203, Universidad de Santiago de Chile: 36';
     case 'Vitacura':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 372, Universidad de Chile: 124, Universidad de Santiago de Chile: 11';
     case 'Lo Barnechea':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 324, Universidad de Chile: 93, Universidad de Santiago de Chile: 3';
     case 'Huechuraba':
-      return 'descripción';
+      return 'Ingresos a la Pontificia Universidad Católica de Chile: 45, Universidad de Chile: 32, Universidad de Santiago de Chile: 13';
     
     default:
       return 'No se encontró información para la comuna especificada.';

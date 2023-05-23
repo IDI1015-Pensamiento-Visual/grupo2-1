@@ -154,13 +154,13 @@ section {
     font-size: 16px;
     cursor: pointer;
     border-radius: 100px;
-
+}
 #infoquintil {
   display: none;
   margin-top: 10px;
 }
   
-}
+
 .info:hover{
   background-color: #FF847C;  
 }
@@ -253,22 +253,10 @@ section {
   font-size: 50px;  
 }
 
-/* Para bajar el texto */
-.bajarIn{
-  position: relative;
-  bottom: -25px;
-}
-.bajarQuin{
-  position: relative;
-  bottom: -50px;
-}
 
 
-/* #mapacalor {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(to right, blue, green, yellow, red);
-} */
+
+
 
 .result {
   display: inline-flex;
@@ -311,7 +299,7 @@ section {
 
 /* Estilo para el texto dentro del globo */
 .oculto-texto {
-  margin: 0; /* Ajusta los márgenes según sea necesario */
+  margin: 0; 
 }
 
 /* Código adaptado de chat gpt: */
@@ -337,7 +325,7 @@ button {
 }
 
 button:hover {
-  background-color: #54a060;
+  background-color: #4ea65c;
 }
 
 p.result {
@@ -388,26 +376,20 @@ p.result {
 
 
 
-/* Estilos CSS para las diapositivas */
-.slide {
-  display: none;
-}
-
-.slide.activo {
-  display: block;
-}
 
 
 .title-box {
   background-color: #99B898;
   padding: 10px;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 650px;
+  margin-bottom: 20px;
 }
 
 #pinicio {
   font-size: 30px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #F5F5F5;
+  margin-bottom: 10px;
   
 }
